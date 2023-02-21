@@ -1,0 +1,61 @@
+# Given an user defined value, first make a dictionary of alphabets, convert them into a matrix of their  byte values and then print 
+#those whose sum is equal to the user defined n
+import itertools
+
+[list(map(lambda n: [b for i in range(len(m), 0, -1) for b in itertools.combinations(m, i) if sum(b) == n], m)) 
+               for m in (list(map(lambda n: ord(n),i)) for i in (''.join(i) 
+                                  for i in (list(circular_shifts(''.join(({chr (c+65) for c in range(26)})))))))]
+
+['VQJCUSHAEGNZWRPYFTLDKIMOXB',
+ 'QJCUSHAEGNZWRPYFTLDKIMOXBV',
+ 'JCUSHAEGNZWRPYFTLDKIMOXBVQ',
+ 'CUSHAEGNZWRPYFTLDKIMOXBVQJ',
+ 'USHAEGNZWRPYFTLDKIMOXBVQJC',
+ 'SHAEGNZWRPYFTLDKIMOXBVQJCU',
+ 'HAEGNZWRPYFTLDKIMOXBVQJCUS',
+ 'AEGNZWRPYFTLDKIMOXBVQJCUSH',
+ 'EGNZWRPYFTLDKIMOXBVQJCUSHA',
+ 'GNZWRPYFTLDKIMOXBVQJCUSHAE',
+ 'NZWRPYFTLDKIMOXBVQJCUSHAEG',
+ 'ZWRPYFTLDKIMOXBVQJCUSHAEGN',
+ 'WRPYFTLDKIMOXBVQJCUSHAEGNZ',
+ 'RPYFTLDKIMOXBVQJCUSHAEGNZW',
+ 'PYFTLDKIMOXBVQJCUSHAEGNZWR',
+ 'YFTLDKIMOXBVQJCUSHAEGNZWRP',
+ 'FTLDKIMOXBVQJCUSHAEGNZWRPY',
+ 'TLDKIMOXBVQJCUSHAEGNZWRPYF',
+ 'LDKIMOXBVQJCUSHAEGNZWRPYFT',
+ 'DKIMOXBVQJCUSHAEGNZWRPYFTL',
+ 'KIMOXBVQJCUSHAEGNZWRPYFTLD',
+ 'IMOXBVQJCUSHAEGNZWRPYFTLDK',
+ 'MOXBVQJCUSHAEGNZWRPYFTLDKI',
+ 'OXBVQJCUSHAEGNZWRPYFTLDKIM',
+ 'XBVQJCUSHAEGNZWRPYFTLDKIMO',
+ 'BVQJCUSHAEGNZWRPYFTLDKIMOX']
+
+[86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66]
+[81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86]
+[74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81]
+[67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74]
+[85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67]
+[83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85]
+[72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83]
+[65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72]
+[69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65]
+[71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69]
+[78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71]
+[90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78]
+[87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90]
+[82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87]
+[80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82]
+[89, 70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80]
+[70, 84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89]
+[84, 76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70]
+[76, 68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84]
+[68, 75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76]
+[75, 73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68]
+[73, 77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75]
+[77, 79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73]
+[79, 88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77]
+[88, 66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79]
+[66, 86, 81, 74, 67, 85, 83, 72, 65, 69, 71, 78, 90, 87, 82, 80, 89, 70, 84, 76, 68, 75, 73, 77, 79, 88]
