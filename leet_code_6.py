@@ -1,0 +1,27 @@
+#Amazon, google interview question but data example is mine
+data={'Veronica': [60, 75, -50],
+      'Cynthia': [50, 55, 70],
+      'Miley': [70, -50, 90],
+      'Wanda': [40, 70, 80],
+      'Ronnie': [25, -80, 55],
+      'Samantha': [40, 90, 70],
+      'Sarah': [85, 75, 95],
+      'Yvonne': [75, -75, 75],
+      'Timothy': [90, 85, 80],
+      'Leah': [55, -30, 40],
+      'June': [25, 30, 40],
+      'Betty': [10, 25, 30],
+      'Cookie': [35, -10, 45],
+      'Dwight': [80, 65, 60],
+      'Nashrah': [80, -85, 90],
+      'Debbie': [65, 75, 55],
+      'Chloe': [40, -35, 20],
+      'Merle': [78, 83, 73],
+      'Tammy': [87, -92, 82],
+      'April': [66, 79, 53],
+      'Faith': [66, -79, 53],
+      'Brenda': [25, 80, 55],
+      'Emmylou': [75, -80, 80],
+      'Keira': [50, 45, 55]
+      }
+[list(map(lambda x: x.count('1'),v)) for v in ((list(map(lambda x: bin(x)[3:],j))) for j in (list(map(lambda x: -x,i)) for i in data.values()))]
